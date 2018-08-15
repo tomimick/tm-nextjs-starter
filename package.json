@@ -3,8 +3,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export -o docs",
-    "pyserve": "cd out; python3 -m http.server"
+    "export": "NODE_ENV=production next build && next export -o docs",
+    "pyserve": "cd docs; python3 -m http.server"
   },
   "dependencies": {
     "@zeit/next-sass": "^0.2.0",
