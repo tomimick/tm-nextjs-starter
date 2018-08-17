@@ -37,7 +37,10 @@ decorate(MyStore, {
 
     // our data
     movielist: observable,
-    count: computed
+    count: computed,
+    // actions
+    set_movies: action,
+    add_movie: action
 });
 
 // log mobx errors
