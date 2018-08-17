@@ -30,6 +30,9 @@ export default class MyApp extends App {
             <Head>
                 <link rel="stylesheet" href="/_next/static/style.css" />
                 <title>React + Nextjs + MobX starter</title>
+
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
 
             <div className="outer">
