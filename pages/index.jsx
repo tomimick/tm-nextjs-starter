@@ -18,7 +18,7 @@ class About extends React.Component {
     componentDidMount() {
         console.info("index did mount");
 
-        // query movies and put into store
+        // query movies and put into store, whenever this page gets activated
         api.query_movies().then(movies => store.set_movies(movies));
     }
 
@@ -45,8 +45,6 @@ class About extends React.Component {
 
 // mark as mobx observer
 export default observer(About);
-
-//api.query_movies(); // would load only once
 
 // debug in console
 //window.store = store;

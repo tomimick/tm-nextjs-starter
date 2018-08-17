@@ -25,6 +25,7 @@ class ServerAPI {
     query_movies() {
         let url = URL_MOVIES;
         return axios.get(url);
+        // have a cache here so the request would not always reach server
     }
 
     get_movie(id) {

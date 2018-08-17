@@ -13,11 +13,19 @@ import MyHeader from "../components/MyHeader"
 // required here for hot reload
 import css from "../styles/layout.sass"
 
+import store from "../store"
+import api from "../serverapi"
+
 
 export default class MyApp extends App {
 
     componentDidMount() {
         console.info("app did mount");
+
+        // always query movies at the start of the app, no matter what page
+        // gets loaded first (actually we just need the count in the header
+        // but for simplicity there is no separate API for count only)
+        api.query_movies().then(movies => store.set_movies(movies));
     }
 
     render () {
