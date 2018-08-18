@@ -34,7 +34,10 @@ export default class MovieDetailView extends React.Component {
     componentDidMount() {
         console.info("MovieDetailView did mount", this.props);
 
-        api.get_movie(this.props.id).then(d => this.setState({movie: d}));
+        // get movie id (getInitialProps is not always called, Nextjs bug?)
+        let movie_id = this.props.id ? this.props.id : (new URLSearchParams(window.location.search)).get("id");
+
+        api.get_movie(movie_id).then(d => this.setState({movie: d}));
     }
 
     onDelete(e) {

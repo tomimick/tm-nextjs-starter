@@ -34,9 +34,12 @@ export default class MovieEditView extends React.Component {
     componentDidMount() {
         console.info("MovieEditView did mount" + this.props.id);
 
-        if (this.props.id) {
+        // get movie id (getInitialProps is not always called, Nextjs bug?)
+        let movie_id = this.props.id ? this.props.id : (new URLSearchParams(window.location.search)).get("id");
+
+        if (movie_id) {
             // editing, load the movie
-            api.get_movie(this.props.id).then(d => {
+            api.get_movie(movie_id).then(d => {
                 this.setState({movie: d, oldtitle:d.title});
             });
         }
