@@ -2,6 +2,8 @@
 /* Movie details page.
  *
  * Displays single movie data.
+ *
+ * Only local data, no store access.
  */
 
 import React from 'react'
@@ -36,6 +38,8 @@ export default class MovieDetailView extends React.Component {
     }
 
     onDelete(e) {
+        e.preventDefault();
+
         if (!confirm("Delete this movie?"))
             return;
 
@@ -44,6 +48,7 @@ export default class MovieDetailView extends React.Component {
     }
 
     onBack(e) {
+        e.preventDefault();
         Router.back();
     }
 
@@ -60,12 +65,12 @@ export default class MovieDetailView extends React.Component {
             <p>Title = {this.state.movie.title}</p>
             <p>Director = {this.state.movie.director}</p>
 
-            <Link href={"/movieedit?id="+this.state.movie.id}>
-                <button>Edit</button></Link>
-            <button className="right delete"
-                onClick={this.onDelete}>Delete</button>
+            <a href="#" className="but back" onClick={this.onBack}>Back</a>
 
-            <a href="#" onClick={this.onBack}>Back</a>
+            <Link href={"/movieedit?id="+this.state.movie.id}>
+                <a className="but">Edit</a></Link>
+            <a className="but right delete" href="#"
+                onClick={this.onDelete}>Delete</a>
 
             </React.Fragment>
         )

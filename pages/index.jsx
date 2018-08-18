@@ -37,7 +37,7 @@ class About extends React.Component {
             ))}
             </ol>
 
-            <Link href="/movieedit"><a>Add a new movie</a></Link>
+            <Link href="/movieedit"><a className="but">Add a new movie</a></Link>
             </React.Fragment>
         )
     }

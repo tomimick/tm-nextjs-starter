@@ -54,7 +54,7 @@ export default class MyApp extends App {
                 Sidebar
                 </aside>
 
-                <footer> Sample Footer
+                <footer> Footer
                     <Link href="/"><a>Home</a></Link>
                     <Link href="/about"><a>About</a></Link>
                     <a className="right" href="https://github.com/tomimick/tm-nextjs-starter">Source at Github</a>

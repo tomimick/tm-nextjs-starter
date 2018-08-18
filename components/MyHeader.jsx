@@ -11,9 +11,9 @@ import store from "../store";
 
 const MyHeader = observer((props) => (
     <header>
-        <p className="right">Movie count={store.count}</p>
+        <p className="right">Movies: {store.count}</p>
         <h1>React + Next.js + MobX starter</h1>
-        <p>by Tomi Mickelsson</p>
+        <p className="author">by Tomi Mickelsson</p>
 
     </header>
 ))

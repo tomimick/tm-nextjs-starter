@@ -2,6 +2,8 @@
 /* Page to edit a movie.
  *
  * A regular form with 2 fields and a button.
+ *
+ * Only local data, no store access.
  */
 
 import React from 'react'
@@ -59,6 +61,7 @@ export default class MovieEditView extends React.Component {
     }
 
     onBack(e) {
+        e.preventDefault();
         Router.back();
     }
 
@@ -79,15 +82,17 @@ export default class MovieEditView extends React.Component {
             <div>
             <label>Title:</label>
             <input type="text" name="title" value={this.state.movie.title}
-                onChange={this.onInputChange} autoFocus />
+                onChange={this.onInputChange} autoFocus autoComplete="off" />
             </div>
             <div>
             <label>Director:</label>
             <input type="text" name="director" value={this.state.movie.director}
-                onChange={this.onInputChange} />
+                onChange={this.onInputChange} autoComplete="off" />
             </div>
+
+            <a href="#" className="but back" onClick={this.onBack}>Back</a>
+
             <button type="submit">Save</button>
-            <a href="#" onClick={this.onBack}>Back</a>
             </form>
 
             </React.Fragment>

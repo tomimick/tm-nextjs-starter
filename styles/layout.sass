@@ -6,7 +6,9 @@ body
     margin: 0 auto
     max-width: 80%
     background: #f5f5f5
-    font-family: sans-serif
+    font-family: courier
+    background: #2980B9
+    background: #fff
 
 .outer
     display: grid
@@ -23,50 +25,94 @@ header, footer
     grid-column: 1 / 4
     background: #f1f8ff
     border: 1px solid #c8e1ff
+    margin-top: 10px
+
+    p
+        margin: 0
+
+    p.author
+        color: #777
 
 aside
     background: #cce1ff
 
 a
     margin: 0 8px
-    padding: 2px
-    color: blue
+    padding: 2px 5px
+    text-decoration: none
 
     &:visited
-        color: #44a
+        color: #4f4fce
 
     &:hover
-        color: #008
-        background: #ccf
+        color: #02008a
+        //background: #0f65d0
+        //border-radius: 3px
+        text-decoration: underline
+        font-weight: bold
 
-button
-    padding: 10px
+a.but, button
+    display: inline-block
     color: #fff
-    background: #55f
+    padding: 10px 20px
+    border-radius: 5px
+    background: #0f65d0
+    text-transform: uppercase;
+    text-decoration: none
+    margin-top: 20px
+    cursor: pointer
+    // button needs these here
+    font-family: courier
+    font-size: 100%
 
-button.delete
-    background: red
+    &:hover
+        background: #09356b
+        font-weight: normal
+
+    &.delete
+        background: #ff6b6b
+
+    &.back
+        color: #aaa
+        background: #fff
+        border: 2px solid #aaa
+
+        &:hover
+            background: #efefef
 
 .right
     float: right
 
 h1, h2
     margin: 0
-
+    font-size: 130%
 h2
-    color: #55a
+    color: #4a4ad4
+    margin-bottom: 20px
 
 label
-    color: #888
+    color: #777
+    display: inline-block;
+    width: 30%
 
 input
     width: 70%
-    margin: 10px
+    box-sizing: border-box;
+    margin: 10px 0
     padding: 10px
+    border: 1px solid #ccc
+    font-size: 110%
 
     &:focus
-        background: #eef
+        background: #f1f8ff
 
+ol
+    li
+        margin: 7px
+
+        a
+            margin-left: 0
+            padding-left: 0
 
 /* responsive styles */
 @media all and (max-width: 768px)
@@ -77,7 +123,9 @@ input
     article
         grid-column: 1 / 4
 
+    input
+        width: 80%
 
 /* import other files */
-@import 'another.sass'
+/* @import 'another.sass' */
 
