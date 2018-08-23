@@ -7,7 +7,7 @@ easy, take a peek of this.  Developing a modern SPA React app does not get
 much simpler than this.
 
 
-LIVE DEMO https://tm-nextjs-starter.tomicloud.com
+LIVE DEMO [nextjs.tomicloud.com](https://nextjs.tomicloud.com)
 -------------------------------------------------
 
 ![Screenshot](docs/screenshot.png)
@@ -231,6 +231,11 @@ Support
 Go ahead and take this starter, code or ideas, and build your great app.  You
 can also [contact me](mailto:atomi@iki.fi) to ask if I am available for
 freelancing work.
+
+Vue version
+-----------
+
+If you prefer Vue over React, I have also coded this same starter with [Vue Nuxtjs](https://github.com/tomimick/tm-nuxtjs-starter).
 
 License
 -------
