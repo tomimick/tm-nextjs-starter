@@ -204,23 +204,23 @@ its all about Javascript, not HTML).
 
 ```shell
 Page Size Inspector Report
-URL: https://tm-nextjs-starter.tomicloud.com/
+URL: https://nextjs.tomicloud.com/
 
 REQUEST                                       REQ     BYTES
 
 TOTAL___________________________________________6____94,159
 
 Document________________________________________1_______916
--tm-nextjs-starter.tomicloud.com/                       916
+-nextjs.tomicloud.com/                                  916
 
 Script__________________________________________4____92,836
--tm-nextjs-starter.tomicloud.com/_next.../index.js    1,053
--tm-nextjs-starter.tomicloud.com/_next/.../_app.js    2,506
--tm-nextjs-starter.tomicloud.com/_nex.../_error.js    2,490
--tm-nextjs-starter.tomicloud.com/.../main-6a4a..js   86,787
+-nextjs.tomicloud.com/_next.../index.js               1,053
+-nextjs.tomicloud.com/_next/.../_app.js               2,506
+-nextjs.tomicloud.com/_nex.../_error.js               2,490
+-nextjs.tomicloud.com/.../main-6a4a..js              86,787
 
 Stylesheet______________________________________1_______407
--tm-nextjs-starter.tomicloud.com/_nex.../style.css      407
+-nextjs.tomicloud.com/_nex.../style.css                 407
 ```
 
 (Report by my Chrome extension [Page Size Inspector](https://chrome.google.com/webstore/detail/oepnndnpjiahgkljgbohnnccmokgcoln).)
