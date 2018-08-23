@@ -6,7 +6,7 @@ body
     margin: 0 auto
     max-width: 80%
     background: #f5f5f5
-    font-family: courier
+    font-family: verdana, courier
     background: #2980B9
     background: #fff
 
@@ -40,6 +40,7 @@ a
     margin: 0 8px
     padding: 2px 5px
     text-decoration: none
+    font-weight: bold
 
     &:visited
         color: #4f4fce
@@ -49,7 +50,6 @@ a
         //background: #0f65d0
         //border-radius: 3px
         text-decoration: underline
-        font-weight: bold
 
 a.but, button
     display: inline-block
@@ -62,12 +62,11 @@ a.but, button
     margin-top: 20px
     cursor: pointer
     // button needs these here
-    font-family: courier
+    font-family: verdana, courier
     font-size: 100%
 
     &:hover
         background: #09356b
-        font-weight: normal
 
     &.delete
         background: #ff6b6b
@@ -87,7 +86,6 @@ h1, h2
     margin: 0
     font-size: 130%
 h2
-    color: #4a4ad4
     margin-bottom: 20px
 
 label
@@ -119,7 +117,12 @@ ol
     body
         max-width: 100%
 
-    aside,
+    header
+        margin: 0
+
+    aside
+        display: none
+
     article
         grid-column: 1 / 4
 

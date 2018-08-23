@@ -29,8 +29,8 @@ export default class About extends React.Component {
 
             <style jsx>{`
                 p.example {
-                    color: #881a1a;
-                    background: #ffdcdc;
+                    color: #1a881a;
+                    background: #dcffdc;
                     padding: 10px;
                     border: 1px dashed #111;
                 }
