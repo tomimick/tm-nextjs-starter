@@ -14,7 +14,7 @@ import MyHeader from "../components/MyHeader"
 import css from "../styles/layout.sass"
 
 import store from "../store"
-import api from "../serverapi"
+import api from "../config"
 
 
 export default class MyApp extends App {

@@ -11,7 +11,7 @@ import React from 'react'
 import Head from 'next/head'
 import Router from 'next/router'
 
-import api from "../serverapi"
+import api from "../config"
 
 
 export default class MovieEditView extends React.Component {
@@ -52,8 +52,9 @@ export default class MovieEditView extends React.Component {
             return;
 
         // save the data and go to front page
-        api.save_movie(this.state.movie);
-        Router.push('/');
+        api.save_movie(this.state.movie)
+                .then(reply => Router.push('/'))
+                .catch(error => alert("Error occurred"));
     }
 
     onInputChange(e) {

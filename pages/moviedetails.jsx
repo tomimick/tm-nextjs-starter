@@ -12,7 +12,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Router from 'next/router'
 
-import api from "../serverapi"
+import api from "../config"
 
 
 export default class MovieDetailView extends React.Component {
@@ -46,8 +46,9 @@ export default class MovieDetailView extends React.Component {
         if (!confirm("Delete this movie?"))
             return;
 
-        api.delete_movie(this.props.id);
-        Router.push('/');
+        api.delete_movie(this.props.id)
+                .then(reply => Router.push('/'))
+                .catch(error => alert("Error occurred"));
     }
 
     onBack(e) {

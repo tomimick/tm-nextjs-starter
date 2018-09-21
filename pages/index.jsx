@@ -10,7 +10,7 @@ import { observer } from "mobx-react"
 import Link from 'next/link'
 
 import store from "../store"
-import api from "../serverapi"
+import api from "../config"
 
 
 class About extends React.Component {
