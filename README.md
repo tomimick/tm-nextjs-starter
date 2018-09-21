@@ -20,7 +20,9 @@ delete a movie.
 The demo uses browser localStorage for the data storage, which means it runs
 without a backend.  The sources do contain a module that does real AJAX calls
 to a REST backend - you just need to enable the module and write a server,
-and you are in good track to have a real web app.
+and you are in good track to have a real web app. I have developed
+[RESTPie3 Python REST API server](https://github.com/tomimick/restpie3) which
+implements this simple movie API as an example.
 
 
 Building blocks
@@ -58,11 +60,12 @@ Source tree
 │       └── /movies.json        # sample list of 4 movies - loaded initially
 ├── /styles/                    # global SASS files
 │   └── /layout.sass            # main layout
+├── config.js                   # app config, select ajax or localstorage
 ├── next.config.js              # nextjs configuration, almost empty
 ├── package-lock.json           # npm something
 ├── package.json                # list of npm packages required
 ├── README.md                   # this doc
-├── serverapi.js                # API, talks AJAX to a real backend (inactive)
+├── serverapi_ajax.js           # API, talks AJAX to a real backend
 ├── serverapi_localstorage.js   # API, talks to localStorage
 └── store.js                    # data store, managed by MobX
 ```
@@ -225,12 +228,16 @@ Stylesheet______________________________________1_______407
 
 (Report by my Chrome extension [Page Size Inspector](https://chrome.google.com/webstore/detail/oepnndnpjiahgkljgbohnnccmokgcoln).)
 
-Support
--------
 
-Go ahead and take this starter, code or ideas, and build your great app.  You
-can also [contact me](mailto:atomi@iki.fi) to ask if I am available for
-freelancing work.
+Need help?
+----------
+
+Go ahead and take this React starter and perhaps my [RESTPie3 Python REST API
+server](https://github.com/tomimick/restpie3) too and build your great
+service.
+
+You can also [contact me](mailto:tomi.mickelsson@gmail.com) to ask if I am
+available for freelancing work.
 
 Vue version
 -----------
