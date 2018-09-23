@@ -36,7 +36,6 @@ export default class MyApp extends App {
             {/* global sass styles
                 pages may also define Head which is merged with this */}
             <Head>
-                <link rel="stylesheet" href="/_next/static/style.css" />
                 <title>React + Nextjs + MobX starter</title>
 
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
