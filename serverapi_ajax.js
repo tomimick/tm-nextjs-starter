@@ -18,34 +18,37 @@ const URL_MOVIES = "http://localhost:8100/api/movies/";
 class ServerAPI {
 
     constructor() {
+        this.client = axios.create({
+            withCredentials: true, // pass cookies to cross-site api
+        });
     }
 
     query_movies() {
         let url = URL_MOVIES;
-        return axios.get(url).then(reply => {return reply.data});
+        return this.client.get(url).then(reply => {return reply.data});
         // have a cache here so the request would not always reach server
     }
 
     get_movie(id) {
         let url = `${URL_MOVIES}${id}`;
-        return axios.get(url).then(reply => {return reply.data});
+        return this.client.get(url).then(reply => {return reply.data});
     }
 
     save_movie(item) {
         if (!item.id) {
             // create
             let url = URL_MOVIES;
-            return axios.post(url, item);
+            return this.client.post(url, item);
         } else {
             // update
             let url = `${URL_MOVIES}${item.id}`;
-            return axios.put(url, item);
+            return this.client.put(url, item);
         }
     }
 
     delete_movie(id) {
         let url = `${URL_MOVIES}${id}`;
-        return axios.delete(url);
+        return this.client.delete(url);
     }
 }
 
