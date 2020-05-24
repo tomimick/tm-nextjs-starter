@@ -6,7 +6,7 @@
  */
 
 import { observable, computed, action, decorate } from "mobx";
-import { onError } from "mobx-react"
+// import { onError } from "mobx-react"
 
 
 class MyStore {
@@ -44,9 +44,9 @@ decorate(MyStore, {
 });
 
 // log mobx errors
-onError(error => {
-    console.log(error)
-});
+// onError(error => {
+//     console.log(error)
+// });
 
 // export singleton store
 const store = new MyStore();
