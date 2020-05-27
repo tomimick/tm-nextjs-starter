@@ -7,17 +7,17 @@
     "pyserve": "cd out; python3 -m http.server"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "mobx": "^5.0.3",
-    "mobx-react": "^5.2.3",
-    "next": "^7.0.0",
+    "axios": "^0.19.2",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.2.2",
+    "next": "^9.4.2",
     "nextjs": "0.0.3",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "webpack": "^4.19.1",
+    "webpack": "^4.43.0",
     "@zeit/next-sass": "^1.0.1",
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.14.1"
   }
 }
