@@ -7,7 +7,7 @@
     "pyserve": "cd out; python3 -m http.server"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
     "next": "^9.4.2",
